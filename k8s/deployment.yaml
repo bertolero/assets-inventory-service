@@ -16,6 +16,10 @@ spec:
       creationTimestamp: null
       labels:
         app: assets-inventory-service
+      annotations:
+        consul.hashicorp.com/connect-inject: 'true'
+        consul.hashicorp.com/service-meta-version: 'v1'
+        consul.hashicorp.com/service-tags: 'api'
     spec:
       containers:
       - image: localhost:5000/apps/demo
